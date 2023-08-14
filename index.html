@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
+    <script>
+        // Function to smooth scroll to a section
+function scrollToSection(sectionId) {
+    var section = document.getElementById(sectionId);
+    if (section) {
+        window.scrollTo({
+            top: section.offsetTop,
+            behavior: 'smooth'
+        });
+    }
+}
+
+// Add click event listeners to navbar links
+var navbarLinks = document.querySelectorAll('nav ul li a');
+for (var i = 0; i < navbarLinks.length; i++) {
+    navbarLinks[i].addEventListener('click', function (event) {
+        event.preventDefault();
+        var sectionId = this.getAttribute('href').substr(1);
+        scrollToSection(sectionId);
+    });
+}
+
+    </script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.jpg" class="logo"></img>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <i class="fas fa-bars"></i>
+            </nav>
+            <div class="header-text">
+                <p>AI Engineer</p>
+                <h1>Hi, I'm <span>Tanzeel <br> Dilshad</span> From India</h1>
+            </div>
+        </div>
+    </div>
+    <!-- ----------ABOUT---------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Aspiring AIengineer looking for opportunities on the areas of 
+                        research & business. With Bachelors in AI ML, practical experience 
+                        in diverse AI/ML areas and strong communication skills, I am passionate 
+                        about using AI to solve challenging business problems.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                        <p class="tab-links" onclick="openTab('experience')">Experience</p>
+                        <p class="tab-links" onclick="openTab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>AI & Data Science</span><br>Computer Vision <br> Natural Language Processing <br> Signal Processing <br> Probability & Statistics <br> Data Analytics & Visualization <br> Frameworks & Libraries                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>01/2023–Present</span><br>AI Engineer , Spillmate (Co-Founder)</li>
+                            <li><span>06/2023–07/2023</span><br>DataAnalyst Intern,Affilienet</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>07/2020–Present </span><br>B.TECH in CSE, Specialization in AI,Jamia Hamdard ,New Delhi, INDIA.</li>
+                            <li><span>06/2018 – 06/2020</span><br>Senior Secondary School,St. Joseph’s School,Mahoba, Uttar Pradesh, INDIA.</li>
+                            <li><span>04/2006–04/2018</span><br>High School,St. Joseph’s School,Mahoba, Uttar Pradesh, INDIA.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------SERVICES---------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                
+               
+                <div>
+
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>Artificial Intelligence</h2>
+                    <p>
+                        <ul>
+                            <li>I develop end-to-end AI based systems in Computer Vision, NLP, Facial Recognition, and other AI sub-domains.</li> <br>
+                        <span> <br></span>
+                        
+                        <li>I can also offer support to existing AI based projects & researches in your firm. </li> <br>
+                        <span> <br></span>
+                        <li> Low-latency, high real-time performance, & scalability are my priorities. </li>
+                        </ul>  
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------PORTFOLIO--------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.jpg" alt="" width="650" height="410">
+                    <div class="layer">
+                        <h2>Sentimental Analysis on review</h2>
+                        <p>Learnt to apply algorithms to Datasets.A minor project utilizing Natural Language 
+                            Processing techniques to perform sentiment analysis, examining text data to determine the emotional tone (positive,
+                            negative, or neutral) of agiven text or document
+                            </p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png" alt="" width="650" height="410">
+                    <div class="layer">
+                        <h2> Face Mask Detection</h2>
+                        <p> A minor project implementing face mask detection using the
+                             TensorFlow framework. It utilizes deeplearning techniques to detect and classify whether individuals are wearing face masks or not in real-time scenarios.</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+            <a href="" class="btn">See more</a>
+        </div>
+    </div>
+
+    <!-- ----------CONTACT---------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i> tanzeeldilshad786@gmail.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i> +91-9559716402</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter-square"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn3">submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright @ Tanzeel Dilshad . Made with <i class="fas fa-heart"></i> by Tanzeel</p>
+        </div>
+    </div>
+
+
+
+    <script>
+        // JavaScript for handling the tab links and content
+        function openTab(tabName) {
+            var tabContents = document.getElementsByClassName('tab-contents');
+
+            for (tabContent of tabContents) {
+                tabContent.classList.remove('active-tab');
+            }
+            document.getElementById(tabName).classList.add('active-tab');
+        }
+
+        // JavaScript for handling the mobile navigation menu
+        document.querySelector('.fas.fa-bars').addEventListener('click', function () {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        document.querySelector('.fas.fa-times').addEventListener('click', function () {
+            document.querySelector('nav ul').classList.remove('show');
+        });
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>
